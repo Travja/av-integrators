@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Badge from '$lib/Badge.svelte';
-	import Meta  from '$lib/Meta.svelte';
+	import Meta from '$lib/Meta.svelte';
 
 	const copyToClipboard = (text: string) => {
 		navigator.clipboard.writeText(text);
@@ -50,7 +50,7 @@
 </div>
 
 <style>
-    p {
-        text-wrap: balance;
-    }
+	p {
+		text-wrap: balance;
+	}
 </style>

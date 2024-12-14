@@ -4,11 +4,12 @@
 
 <Meta
 	description="Taking care of your low-voltage needs with quality and professionalism.
-	 Audio Video Integrators can tackle networking to security. We do residential and commercial projects." />
+	 Audio Video Integrators can tackle networking to security. We do residential and commercial projects."
+/>
 
 <h1 class="hidden">Audio Video Integrators Home</h1>
 
-<h2 class="text-xl mb-4">Wiring your home for all of your low-voltage needs!</h2>
+<h2 class="mb-4 text-xl">Wiring your home for all of your low-voltage needs!</h2>
 
 <img alt="TV Mount" class="mx-auto max-h-64 rounded-lg shadow-lg" src="/tv-mount.webp" />
 

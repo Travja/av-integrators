@@ -77,6 +77,7 @@
 	{#each services as service}
 		<div class="mt-2">
 			<Expandable header={service.title}>
+				<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 				{@html service.content}
 
 				{#if service.images}

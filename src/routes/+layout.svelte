@@ -183,8 +183,8 @@
 		padding: 0.5rem;
 
 		&.active {
-				border: 1px solid transparent;
-				border-bottom: 1px solid white;
+			border: 1px solid transparent;
+			border-bottom: 1px solid white;
 		}
 	}
 
@@ -209,10 +209,10 @@
 	@media (min-width: 640px) {
 		header {
 			/*
-            Grid will have logo on the left.
-						On the right-bottom is navigation.
-						Right-top is contact details.
-						*/
+									Grid will have logo on the left.
+									On the right-bottom is navigation.
+									Right-top is contact details.
+									*/
 			grid-template-areas:
 				'logo contact'
 				'nav nav';
@@ -230,10 +230,10 @@
 	@media (min-width: 768px) {
 		header {
 			/*
-            Grid will have logo on the left.
-						On the right-bottom is navigation.
-						Right-top is contact details.
-						*/
+									Grid will have logo on the left.
+									On the right-bottom is navigation.
+									Right-top is contact details.
+									*/
 			grid-template-areas:
 				'logo contact'
 				'logo nav';
