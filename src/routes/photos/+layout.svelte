@@ -6,6 +6,7 @@
 
 <Meta
 	description="Browse images of our installations including Home Theaters, TV Mounts, Security Systems, and more."
-	title="Photos" />
+	title="Photos"
+/>
 
 {@render children()}

@@ -3,33 +3,33 @@
 @import 'tailwindcss/utilities';
 
 :root {
-    interpolate-size: allow-keywords;
+	interpolate-size: allow-keywords;
 }
 
 .material-symbols-rounded {
-    user-select: none;
+	user-select: none;
 }
 
 body {
-    min-height: 100dvh;
-    display: grid;
-    grid-template-areas:
-        'header'
-        'main'
-        'footer';
-    grid-template-rows: auto 1fr auto;
+	min-height: 100dvh;
+	display: grid;
+	grid-template-areas:
+		'header'
+		'main'
+		'footer';
+	grid-template-rows: auto 1fr auto;
 }
 
 a {
-    color: #007bff;
+	color: #007bff;
 }
 
 @media (prefers-color-scheme: dark) {
-    a {
-        color: #77d8ff;
-    }
+	a {
+		color: #77d8ff;
+	}
 }
 
 p:not(:last-child) {
-    margin-bottom: 1.5rem;
+	margin-bottom: 1.5rem;
 }

@@ -3,28 +3,28 @@
 
 	export let photos = [
 		{
-			title:   'Home Theater',
+			title: 'Home Theater',
 			caption: 'Home Theater',
-			image:   '/home-theater.jpeg'
+			image: '/home-theater.jpeg'
 		},
 		{
-			title:   'Flat Screen TVs',
+			title: 'Flat Screen TVs',
 			caption: 'Flat Screen TVs',
-			image:   '/tv-mount.webp'
+			image: '/tv-mount.webp'
 		},
 		{
-			title:   'Commercial',
+			title: 'Commercial',
 			caption: 'Commercial',
-			image:   '/commercial.jpeg'
+			image: '/commercial.jpeg'
 		},
 		{
-			title:   'New Construction',
+			title: 'New Construction',
 			caption: 'New Construction',
-			image:   '/new-construction.jpeg'
+			image: '/new-construction.jpeg'
 		}
 	];
 </script>
 
-<Gallery photos={photos} title="Commercial" />
+<Gallery {photos} title="Commercial" />
 
 <style></style>

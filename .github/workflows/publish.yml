@@ -6,6 +6,8 @@ on:
     paths:
       - src/**
       - static/**
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -24,6 +26,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.

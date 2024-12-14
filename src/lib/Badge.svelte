@@ -14,7 +14,7 @@
 
 {#snippet content()}
 	{#if icon}
-		<div class="badge__icon material-symbols-rounded text-black dark:text-white mb-2">
+		<div class="badge__icon material-symbols-rounded mb-2 text-black dark:text-white">
 			{icon}
 		</div>
 	{/if}
@@ -24,28 +24,31 @@
 {/snippet}
 
 {#if link}
-	<a class="badge inline-flex flex-col
-						justify-center items-center
-						p-4 bg-gray-300 dark:bg-slate-600"
-		 href={link}>
+	<a
+		class="badge inline-flex flex-col
+						items-center justify-center
+						bg-gray-300 p-4 dark:bg-slate-600"
+		href={link}
+	>
 		{@render content()}
 	</a>
 {:else}
-	<div class="badge inline-flex flex-col
-						justify-center items-center
-						p-4 bg-gray-300 dark:bg-slate-600"
-			 tabindex="0"
-			 role="button"
-			 {onclick}
-			 {onkeydown}
+	<div
+		class="badge inline-flex flex-col
+						items-center justify-center
+						bg-gray-300 p-4 dark:bg-slate-600"
+		tabindex="0"
+		role="button"
+		{onclick}
+		{onkeydown}
 	>
 		{@render content()}
 	</div>
 {/if}
 
 <style>
-    .badge {
-        align-items: center;
-        border-radius: 1rem;
-    }
+	.badge {
+		align-items: center;
+		border-radius: 1rem;
+	}
 </style>
