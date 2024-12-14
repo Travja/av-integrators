@@ -183,7 +183,7 @@
 		padding: 0.5rem;
 
 		&.active {
-				border: none;
+				border: 1px solid transparent;
 				border-bottom: 1px solid white;
 		}
 	}
