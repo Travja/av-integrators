@@ -29,7 +29,7 @@
 	<meta content="Audio Video Integrators" property="og:site_name" />
 	<meta content={$page.url.pathname !== '/' ? decorate(title) : title || 'Audio Video Integrators'}
 				property="og:title" />
-	<meta content={$page.url.toString()} property="og:url" />
+	<meta content={PUBLIC_BASE_URL} property="og:url" />
 	<meta content={description} property="og:description" />
 	<meta content="{image ? image : PUBLIC_BASE_URL + '/logo.png'}" property="og:image" />
 	<meta content="{image ? image : PUBLIC_BASE_URL + '/logo.png'}" property="twitter:image" />

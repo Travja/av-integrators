@@ -12,7 +12,7 @@
 	const inactiveClasses = 'border-transparent border-b-white bg-gray-400 dark:bg-slate-600';
 
 	let expanded = $state(false);
-	let smallScreen = $state(true);
+	let smallScreen = $state(false);
 
 	onMount(() => {
 		handleResize();
@@ -181,6 +181,11 @@
 		white-space: nowrap;
 
 		padding: 0.5rem;
+
+		&.active {
+				border: none;
+				border-bottom: 1px solid white;
+		}
 	}
 
 	#slogan {
