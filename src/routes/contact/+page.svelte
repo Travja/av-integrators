@@ -1,10 +1,15 @@
 <script lang="ts">
 	import Badge from '$lib/Badge.svelte';
+	import Meta  from '$lib/Meta.svelte';
 
 	const copyToClipboard = (text: string) => {
 		navigator.clipboard.writeText(text);
 	};
 </script>
+
+<Meta
+	description="Audio Video Integrators services Salt Lake, Utah, Summit, and Wasatch counties."
+	title="Contact" />
 
 <h1 class="text-3xl font-bold text-center my-4">Contact Us</h1>
 

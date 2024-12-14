@@ -1,3 +1,9 @@
+<script>
+	import Meta from '$lib/Meta.svelte';
+</script>
+
+<Meta description="Taking care of your low-voltage needs with quality and professionalism." />
+
 <p>
 	Wiring your home for all of your low-voltage needs!
 </p>

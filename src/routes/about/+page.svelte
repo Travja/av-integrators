@@ -1,6 +1,11 @@
 <script lang="ts">
 	import Badge from '$lib/Badge.svelte';
+	import Meta  from '$lib/Meta.svelte';
 </script>
+
+<Meta
+	description="Audio Video Integrators has been in business for over 20 years thanks to our skilled technicians, guaranteed work, and excellent customer satisfaction. See what makes us special!"
+	title="Why Us" />
 
 <h1 class="text-3xl font-bold text-center my-4">Why Us?</h1>
 

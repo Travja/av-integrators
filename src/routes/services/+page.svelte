@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Expandable from '$lib/Expandable.svelte';
 	import Badge      from '$lib/Badge.svelte';
+	import Meta       from '$lib/Meta.svelte';
 
 	const services: { title: string, content: string, images?: string[], callBadge?: boolean, badgeText?: string }[] = [
 		{
@@ -58,6 +59,9 @@
 		}
 	];
 </script>
+
+<Meta description="Audio Video Integrators offers a variety of services from Home Automation to TV Mounting."
+			title="Services" />
 
 <h1 class="text-3xl font-bold text-center my-4">Services</h1>
 

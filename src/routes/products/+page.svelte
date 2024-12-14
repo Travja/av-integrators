@@ -1,5 +1,10 @@
 <script lang="ts">
+	import Meta from '$lib/Meta.svelte';
 </script>
+
+<Meta
+	description="Audio Video Integrators supports and installs all major brands including Sony, LG, Samsung, and more."
+	title="Products" />
 
 <h1 class="text-3xl font-bold text-center my-4">Products</h1>
 
@@ -26,6 +31,7 @@
 	</ul>
 </div>
 
-<p>See our <a href="/photos">Photos</a> for pictures of our installations including Home Theaters, TV Mounts, Security Systems, and more.</p>
+<p>See our <a href="/photos">Photos</a> for pictures of our installations including Home Theaters, TV Mounts, Security
+	Systems, and more.</p>
 
 <style></style>

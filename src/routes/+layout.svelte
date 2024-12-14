@@ -34,12 +34,6 @@
 	};
 </script>
 
-
-<sveltekit:head>
-	<title>Audio Video Integrators</title>
-</sveltekit:head>
-
-
 <header class="w-full">
 	<a class="inline-block w-full sm:w-80 place-self-center" href="/" id="logo" title="Home">
 		<img alt="Audio Video Integrators Logo"
