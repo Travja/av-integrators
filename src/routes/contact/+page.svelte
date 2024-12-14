@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Badge from '$lib/Badge.svelte';
-	import Meta from '$lib/Meta.svelte';
+	import Meta  from '$lib/Meta.svelte';
 
 	const copyToClipboard = (text: string) => {
 		navigator.clipboard.writeText(text);
@@ -8,7 +8,8 @@
 </script>
 
 <Meta
-	description="Audio Video Integrators services Salt Lake, Utah, Summit, and Wasatch counties."
+	description="Audio Video Integrators services Salt Lake, Utah, Summit, and Wasatch counties.
+	 You can reach us by phone, email, or mail. We look forward to doing business with you."
 	title="Contact"
 />
 
@@ -49,7 +50,7 @@
 </div>
 
 <style>
-	p {
-		text-wrap: balance;
-	}
+    p {
+        text-wrap: balance;
+    }
 </style>

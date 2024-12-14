@@ -3,7 +3,8 @@
 </script>
 
 <Meta
-	description="Audio Video Integrators supports and installs all major brands including Sony, LG, Samsung, and more."
+	description="Audio Video Integrators supports and installs all major brands including Sony, LG, Samsung, and more.
+	 We have been in the business for over 20 years and have worked with almost all major brands."
 	title="Products"
 />
 

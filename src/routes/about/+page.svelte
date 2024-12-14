@@ -4,7 +4,8 @@
 </script>
 
 <Meta
-	description="Audio Video Integrators has been in business for over 20 years thanks to our skilled technicians, guaranteed work, and excellent customer satisfaction. See what makes us special!"
+	description="Audio Video Integrators has been in business for over 20 years thanks to our skilled
+	 technicians, guaranteed work, and excellent customer satisfaction. See what makes us special!"
 	title="Why Us"
 />
 

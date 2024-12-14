@@ -2,7 +2,11 @@
 	import Meta from '$lib/Meta.svelte';
 </script>
 
-<Meta description="Taking care of your low-voltage needs with quality and professionalism." />
+<Meta
+	description="Taking care of your low-voltage needs with quality and professionalism.
+	 Audio Video Integrators can tackle networking to security. We do residential and commercial projects." />
+
+<h1 class="hidden">Audio Video Integrators Home</h1>
 
 <p>Wiring your home for all of your low-voltage needs!</p>
 
