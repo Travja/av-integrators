@@ -8,8 +8,7 @@
 </script>
 
 <Meta
-	description="Audio Video Integrators services Salt Lake, Utah, Summit, and Wasatch counties.
-	 You can reach us by phone, email, or mail. We look forward to doing business with you."
+	description="Audio Video Integrators services Salt Lake, Utah, Summit, and Wasatch counties. You can reach us by phone, email, or mail. We look forward to doing business with you."
 	title="Contact"
 />
 
