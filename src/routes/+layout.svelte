@@ -107,7 +107,7 @@
 </header>
 
 
-<main class="text-center mx-auto mb-6">
+<main class="text-center mx-auto mb-3">
 	{@render children()}
 </main>
 

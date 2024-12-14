@@ -6,6 +6,10 @@
     interpolate-size: allow-keywords;
 }
 
+.material-symbols-rounded {
+    user-select: none;
+}
+
 body {
     min-height: 100dvh;
     display: grid;

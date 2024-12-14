@@ -4,7 +4,10 @@
 
 <h1 class="text-3xl font-bold text-center my-4">Why Us?</h1>
 
-<div id="why-us" class="mx-auto">
+<div class="mx-auto" id="why-us">
+	<img alt="Owner Operated"
+			 class="mx-auto mb-4 sm:mr-4 sm:mb-0 sm:float-left rounded-full h-48 border-4 shadow-lg"
+			 src="/person.webp" />
 	<p class="text-center">
 		Audio Video Integrators has been in business for over 20 years thanks to our skilled technicians,
 		guaranteed work, and excellent customer satisfaction.
@@ -16,7 +19,7 @@
 	</p>
 </div>
 
-<div class="badges flex flex-wrap gap-4 justify-center mt-4">
+<div class="badges flex flex-wrap gap-4 justify-center mt-4 clear-both">
 	<Badge icon="phone" link="tel:+18017550877">
 		<div class="font-bold text-black dark:text-white">Call today to schedule a consultation</div>
 		<div>(801) 755-0877</div>
@@ -26,6 +29,6 @@
 <style>
     #why-us {
         text-wrap: balance;
-				width: min(700px, 90%)
+        /*width: min(700px, 90%)*/
     }
 </style>

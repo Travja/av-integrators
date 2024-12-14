@@ -2,15 +2,17 @@
 	Wiring your home for all of your low-voltage needs!
 </p>
 
+<img alt="TV Mount" class="mx-auto rounded-lg shadow-lg max-h-64" src="/tv-mount.webp" />
+
 {#snippet listItem(content)}
 	{#each content as item}
-		<div class="p-2 rounded-md bg-gray-300 dark:bg-slate-600">
+		<li class="p-2 rounded-md bg-gray-300 dark:bg-slate-600">
 			{item}
-		</div>
+		</li>
 	{/each}
 {/snippet}
 
-<div class="mb-6">
+<div class="my-6">
 	Whether you are building a new home or remodeling an existing one,
 	we can help you with all of your low-voltage needs.
 	<br>We can help you with:
@@ -24,9 +26,9 @@
 	</ul>
 </div>
 
-<p>
+<div>
 	We service <strong>Salt Lake</strong>, <strong>Utah</strong>, <strong>Summit</strong>,
 	and <strong>Wasatch</strong> counties.
-</p>
+</div>
 
 <style></style>
