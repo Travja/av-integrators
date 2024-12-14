@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page }            from '$app/stores';
+	import { PUBLIC_BASE_URL } from '$env/static/public';
 
 	interface Props {
 		title?: string;
@@ -20,7 +21,7 @@
 	<title>{$page.url.pathname !== '/' ? decorate(title) : title || 'Audio Video Integrators'}</title>
 	<meta content={description} name="description" />
 	<meta content="index, follow" name="robots" />
-	<link href={$page.url.toString()} rel="canonical" />
+	<link href={PUBLIC_BASE_URL} rel="canonical" />
 
 	<!-- Social media tags -->
 	<meta content="website" property="og:type" />
@@ -30,7 +31,7 @@
 				property="og:title" />
 	<meta content={$page.url.toString()} property="og:url" />
 	<meta content={description} property="og:description" />
-	<meta content="{image ? image : $page.url.protocol + '//' + $page.url.host + '/logo.png'}" property="og:image" />
-	<meta content="{image ? image : $page.url.protocol + '//' + $page.url.host + '/logo.png'}" property="twitter:image" />
+	<meta content="{image ? image : PUBLIC_BASE_URL + '/logo.png'}" property="og:image" />
+	<meta content="{image ? image : PUBLIC_BASE_URL + '/logo.png'}" property="twitter:image" />
 	<meta content="summary_large_image" name="twitter:card" />
 </svelte:head>
