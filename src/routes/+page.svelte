@@ -8,7 +8,7 @@
 
 <h1 class="hidden">Audio Video Integrators Home</h1>
 
-<p>Wiring your home for all of your low-voltage needs!</p>
+<h2 class="text-xl mb-4">Wiring your home for all of your low-voltage needs!</h2>
 
 <img alt="TV Mount" class="mx-auto max-h-64 rounded-lg shadow-lg" src="/tv-mount.webp" />
 
