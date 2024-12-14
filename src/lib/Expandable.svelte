@@ -1,10 +1,15 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 
 	const { header = $bindable(), children } = $props();
 
-	let open = $state(false);
+	let open = $state(true);
+
+	onMount(() => {
+		if (browser) open = false;
+	});
 </script>
 
 <div
@@ -21,15 +26,23 @@
 	</h3>
 </div>
 
-{#if open || !browser}
-	<div class="content pb-4" transition:slide={{ duration: 300 }}>
-		{@render children()}
-	</div>
-{/if}
+<div class="content mb-3" class:open transition:slide={{ duration: 300 }}>
+	{@render children()}
+</div>
 
 <style>
 	.arrow {
 		transition: transform 0.3s ease;
+	}
+
+	.content {
+		height: 0;
+		overflow: hidden;
+		transition: height 0.3s ease;
+	}
+
+	.open {
+		height: auto;
 	}
 
 	.open .arrow {

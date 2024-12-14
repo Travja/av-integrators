@@ -3,7 +3,6 @@
 	import { page } from '$app/stores';
 	import { onDestroy, onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import { slide } from 'svelte/transition';
 
 	let { children } = $props();
 
@@ -46,9 +45,11 @@
 	</a>
 
 	<div class="text-white" id="contact">
-		<div class="text-center">Call Us: <a href="tel:+18017550877">(801) 755-0877</a></div>
+		<div class="text-center">Call Us: <a id="phone" href="tel:+18017550877">(801) 755-0877</a></div>
 		<div class="text-center">
-			Email Us: <a href="mailto:sales@audiovideointegrators.com">sales@audiovideointegrators.com</a>
+			Email Us: <a id="email" href="mailto:sales@audiovideointegrators.com"
+				>sales@audiovideointegrators.com</a
+			>
 		</div>
 	</div>
 
@@ -62,69 +63,65 @@
 			</button>
 		{/if}
 
-		{#if (smallScreen && expanded) || !smallScreen}
-			<div
-				transition:slide={{ duration: smallScreen ? 300 : 0 }}
-				class="items inline-flex w-full flex-grow flex-col justify-evenly sm:mx-4 sm:w-auto sm:flex-row sm:gap-1"
+		<div
+			class="items flex w-full flex-grow flex-col justify-evenly sm:mx-4 sm:w-auto sm:flex-row sm:gap-1"
+			class:open={(smallScreen && expanded) || !smallScreen}
+		>
+			<a
+				class="link border {$page.route.id === '/' ? activeClasses : inactiveClasses}"
+				class:active={$page.route.id === '/'}
+				class:rounded-t-lg={!smallScreen}
+				href="/"
+				onclick={() => (expanded = false)}
+				onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
+				title="Home">Home</a
 			>
-				<a
-					class="link border {$page.route.id === '/' ? activeClasses : inactiveClasses}"
-					class:rounded-t-lg={!smallScreen}
-					class:active={$page.route.id === '/'}
-					onclick={() => (expanded = false)}
-					onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
-					href="/"
-					title="Home">Home</a
-				>
-				<a
-					class="link border {$page.route.id === '/services' ? activeClasses : inactiveClasses}"
-					class:rounded-t-lg={!smallScreen}
-					class:active={$page.route.id === '/services'}
-					onclick={() => (expanded = false)}
-					onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
-					href="/services"
-					title="Services">Services</a
-				>
-				<a
-					class="link border {$page.route.id === '/products' ? activeClasses : inactiveClasses}"
-					class:rounded-t-lg={!smallScreen}
-					class:active={$page.route.id === '/products'}
-					onclick={() => (expanded = false)}
-					onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
-					href="/products"
-					title="Products">Products</a
-				>
-				<a
-					class="link border {$page.route.id?.includes('/photos')
-						? activeClasses
-						: inactiveClasses}"
-					class:rounded-t-lg={!smallScreen}
-					class:active={$page.route.id?.includes('/photos')}
-					onclick={() => (expanded = false)}
-					onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
-					href="/photos"
-					title="Photos">Photos</a
-				>
-				<a
-					class="link border {$page.route.id === '/about' ? activeClasses : inactiveClasses}"
-					class:rounded-t-lg={!smallScreen}
-					class:active={$page.route.id === '/about'}
-					onclick={() => (expanded = false)}
-					onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
-					href="/about"
-					title="Why Us">Why Us</a
-				>
-				<a
-					class="link border {$page.route.id === '/contact' ? activeClasses : inactiveClasses}"
-					class:rounded-t-lg={!smallScreen}
-					class:active={$page.route.id === '/contact'}
-					onclick={() => (expanded = false)}
-					onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
-					href="/contact"
-					title="Contact">Contact</a
-				>
-			</div>
-		{/if}
+			<a
+				class="link border {$page.route.id === '/services' ? activeClasses : inactiveClasses}"
+				class:active={$page.route.id === '/services'}
+				class:rounded-t-lg={!smallScreen}
+				href="/services"
+				onclick={() => (expanded = false)}
+				onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
+				title="Services">Services</a
+			>
+			<a
+				class="link border {$page.route.id === '/products' ? activeClasses : inactiveClasses}"
+				class:active={$page.route.id === '/products'}
+				class:rounded-t-lg={!smallScreen}
+				href="/products"
+				onclick={() => (expanded = false)}
+				onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
+				title="Products">Products</a
+			>
+			<a
+				class="link border {$page.route.id?.includes('/photos') ? activeClasses : inactiveClasses}"
+				class:active={$page.route.id?.includes('/photos')}
+				class:rounded-t-lg={!smallScreen}
+				href="/photos"
+				onclick={() => (expanded = false)}
+				onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
+				title="Photos">Photos</a
+			>
+			<a
+				class="link border {$page.route.id === '/about' ? activeClasses : inactiveClasses}"
+				class:active={$page.route.id === '/about'}
+				class:rounded-t-lg={!smallScreen}
+				href="/about"
+				onclick={() => (expanded = false)}
+				onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
+				title="Why Us">Why Us</a
+			>
+			<a
+				class="link border {$page.route.id === '/contact' ? activeClasses : inactiveClasses}"
+				class:active={$page.route.id === '/contact'}
+				class:rounded-t-lg={!smallScreen}
+				href="/contact"
+				onclick={() => (expanded = false)}
+				onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
+				title="Contact">Contact</a
+			>
+		</div>
 	</nav>
 </header>
 
@@ -169,6 +166,16 @@
 
 	nav {
 		grid-area: nav;
+
+		.items {
+			height: 0;
+			transition: height 0.3s ease;
+			overflow: hidden;
+
+			&.open {
+				height: auto;
+			}
+		}
 	}
 
 	.link {
@@ -209,10 +216,10 @@
 	@media (min-width: 640px) {
 		header {
 			/*
-									Grid will have logo on the left.
-									On the right-bottom is navigation.
-									Right-top is contact details.
-									*/
+															Grid will have logo on the left.
+															On the right-bottom is navigation.
+															Right-top is contact details.
+															*/
 			grid-template-areas:
 				'logo contact'
 				'nav nav';
@@ -230,10 +237,10 @@
 	@media (min-width: 768px) {
 		header {
 			/*
-									Grid will have logo on the left.
-									On the right-bottom is navigation.
-									Right-top is contact details.
-									*/
+															Grid will have logo on the left.
+															On the right-bottom is navigation.
+															Right-top is contact details.
+															*/
 			grid-template-areas:
 				'logo contact'
 				'logo nav';
