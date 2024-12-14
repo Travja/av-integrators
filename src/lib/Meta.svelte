@@ -30,6 +30,7 @@
 				property="og:title" />
 	<meta content={$page.url.toString()} property="og:url" />
 	<meta content={description} property="og:description" />
-	<meta content="{image ? image : '/logo.png'}" property="og:image" />
+	<meta content="{image ? image : $page.url.protocol + '//' + $page.url.host + '/logo.png'}" property="og:image" />
+	<meta content="{image ? image : $page.url.protocol + '//' + $page.url.host + '/logo.png'}" property="twitter:image" />
 	<meta content="summary_large_image" name="twitter:card" />
 </svelte:head>
