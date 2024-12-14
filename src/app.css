@@ -20,11 +20,6 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-/* Remove after development */
-* {
-    transition: ease all 0.3s;
-}
-
 a {
     color: #007bff;
 }
@@ -35,6 +30,6 @@ a {
     }
 }
 
-p {
+p:not(:last-child) {
     margin-bottom: 1.5rem;
 }

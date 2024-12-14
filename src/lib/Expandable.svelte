@@ -7,7 +7,7 @@
 	let open = $state(false);
 </script>
 
-<div class="text-xl font-bold "
+<div class="text-xl font-bold mb-2"
 		 class:open={open}
 		 onclick={() => open = !open}
 		 onkeydown={(e) => e.key === 'Enter' && (open = !open)}
@@ -21,7 +21,7 @@
 </div>
 
 {#if open || !browser}
-	<div class="content pb-2" transition:slide={{duration: 300}}>
+	<div class="content pb-4" transition:slide={{duration: 300}}>
 		{@render children()}
 	</div>
 {/if}

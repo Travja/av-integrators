@@ -63,28 +63,30 @@
 
 <div class="mx-auto" id="services">
 	{#each services as service}
-		<Expandable header={service.title}>
-			{@html service.content}
+		<div class="mt-2">
+			<Expandable header={service.title}>
+				{@html service.content}
 
-			{#if service.images}
-				<div class="flex flex-wrap gap-4 justify-center">
-					{#each service.images as image}
-						<img alt={service.title} class="rounded-lg shadow-lg max-h-64" src={image} />
-					{/each}
-				</div>
-			{/if}
+				{#if service.images}
+					<div class="flex flex-wrap gap-4 justify-center">
+						{#each service.images as image}
+							<img alt={service.title} class="rounded-lg shadow-lg max-h-64" src={image} />
+						{/each}
+					</div>
+				{/if}
 
-			{#if service.callBadge}
-				<div>
-					<Badge icon="phone" link="tel:+18017550877">
-						{#if service.badgeText}
-							<div class="font-bold text-black dark:text-white">{service.badgeText}</div>
-						{/if}
-						<div>(801) 755-0877</div>
-					</Badge>
-				</div>
-			{/if}
-		</Expandable>
+				{#if service.callBadge}
+					<div>
+						<Badge icon="phone" link="tel:+18017550877">
+							{#if service.badgeText}
+								<div class="font-bold text-black dark:text-white">{service.badgeText}</div>
+							{/if}
+							<div>(801) 755-0877</div>
+						</Badge>
+					</div>
+				{/if}
+			</Expandable>
+		</div>
 	{/each}
 </div>
 

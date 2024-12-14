@@ -7,7 +7,7 @@
 
 	let { children } = $props();
 
-	const activeClasses   = 'border-transparent border-b-white bg-gray-200 dark:bg-slate-800';
+	const activeClasses   = 'border-transparent border-white border-b-none bg-gray-200 dark:bg-slate-800';
 	const inactiveClasses = 'border-transparent border-b-white bg-gray-400 dark:bg-slate-600';
 
 	let expanded    = $state(false);
@@ -57,7 +57,8 @@
 
 	<nav class="place-self-stretch sm:place-self-center pt-2 sm:pt-0">
 		{#if smallScreen}
-			<button class="link w-full border-b border-b-white bg-gray-400 dark:bg-slate-600" onclick={() => expanded = !expanded}>
+			<button class="link w-full border-b border-b-white bg-gray-400 dark:bg-slate-600"
+							onclick={() => expanded = !expanded}>
 				{expanded ? 'Close' : 'Menu'}
 			</button>
 		{/if}
@@ -83,9 +84,9 @@
 					 onclick={() => expanded = false}
 					 onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
 					 href="/products" title="Products">Products</a>
-				<a class="link border {$page.route.id === '/photos' ? activeClasses : inactiveClasses}"
+				<a class="link border {$page.route.id?.includes('/photos') ? activeClasses : inactiveClasses}"
 					 class:rounded-t-lg={!smallScreen}
-					 class:active={$page.route.id === "/photos"}
+					 class:active={$page.route.id?.includes("/photos")}
 					 onclick={() => expanded = false}
 					 onkeydown={(e) => e.key === 'Enter' && (expanded = false)}
 					 href="/photos" title="Photos">Photos</a>
@@ -113,13 +114,13 @@
 
 
 <footer class="text-center text-xs mb-2">
-		&copy; {new Date().getFullYear()} Audio Video Integrators
+	&copy; {new Date().getFullYear()} Audio Video Integrators
 </footer>
 
 
 <style>
     header {
-				grid-area: header;
+        grid-area: header;
 
         display: grid;
 
@@ -172,15 +173,15 @@
     }
 
     main {
-				grid-area: main;
+        grid-area: main;
 
         width: min(1000px, 90%);
         margin-top: 1rem;
     }
 
-		footer {
-				grid-area: footer;
-		}
+    footer {
+        grid-area: footer;
+    }
 
     @media (min-width: 640px) {
         header {
@@ -198,8 +199,8 @@
 
         nav .link.active {
             /* Give a white border on all but the bottom */
-						border-color: white;
-            border-bottom: none;
+            border-color: white;
+            border-bottom-color: transparent;
         }
     }
 

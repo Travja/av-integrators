@@ -6,7 +6,7 @@
 
 <div class="mx-auto" id="why-us">
 	<img alt="Owner Operated"
-			 class="mx-auto mb-4 sm:mr-4 sm:mb-0 sm:float-left rounded-full h-48 border-4 shadow-lg"
+			 class="mx-auto mb-4 rounded-full h-48 border-4 shadow-lg"
 			 src="/person.webp" />
 	<p class="text-center">
 		Audio Video Integrators has been in business for over 20 years thanks to our skilled technicians,
@@ -16,6 +16,12 @@
 		Audio Video Integrators is owner-operated to keep quality high and costs low.
 		We don't spend money on a showroom or expensive advertising. We special order
 		most equipment to be sure that you get what you need, not just what is on sale.
+	</p>
+	<p class="text-center">
+		With competitive prices, quick scheduling and quality service, we are committed to providing you with the best products at the best prices.
+	</p>
+	<p class="text-center">
+		Every project is custom tailored to your budget, structure and needs.  From concept to completion, we will work with you every step of the way.
 	</p>
 </div>
 
@@ -29,6 +35,6 @@
 <style>
     #why-us {
         text-wrap: balance;
-        /*width: min(700px, 90%)*/
+        width: min(700px, 90%)
     }
 </style>
